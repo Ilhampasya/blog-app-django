@@ -7,7 +7,7 @@ pip install -m <nama_module>
 pip install -m <nama_module>==<version>
 ```
 
-### 3. Konfigurasi Dasar
+### 2. Konfigurasi Dasar
 * Buka settings.py pada project directory.
 * Lalu anda akan menemukan kode seperti berikut:
   ```python
@@ -56,7 +56,7 @@ pip install -m <nama_module>==<version>
   ]
   ```
   <b>STATICFILES_DIR</b> maksudnya adalah target folder yang akan di index oleh <b>STATIC_URL</b>
-#### 4. Panduan Pengguna
+### 3. Panduan Pengguna
  Pertama kita akan buat terlebih dahulu parent theme
  ```shell script
 │ myapp (root directory)
