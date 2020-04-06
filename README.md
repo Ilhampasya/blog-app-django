@@ -56,7 +56,7 @@ pip install -m <nama_module>==<version>
   ]
   ```
   <b>STATICFILES_DIR</b> maksudnya adalah target folder yang akan di index oleh <b>STATIC_URL</b>
- #### 3. Panduan Pengguna
+#### 4. Panduan Pengguna
  Pertama kita akan buat terlebih dahulu parent theme
  ```shell script
 │ myapp (root directory)
