@@ -1,0 +1,19 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+{% block 'title' %}Post List{% endblock %}
+{% block 'main' %}
+{% for post in posts|slice:3 %}
+<div class="blog-post">
+     <div class="row">
+         <div class="col-lg-3">
+             <img width="170" height="160" src="{% static 'images/uploads/' %}{{ post.image }}" alt="">
+         </div>
+         <div class="col-lg-9">
+             <h2 class="blog-post-title"><a href="{% url 'post:read' post.id %}" class="text-dark">{{ post.title }}</a></h2>
+             <p class="blog-post-meta">{{ post.created_at }}</p>
+             <p>{{ post.contents|slice:200 }}{% if post.contents|length > 200 %}...{% endif %}</p>
+         </div>
+     </div>
+ </div><!-- /.blog-post -->
+{% endfor %}
+{% endblock %}

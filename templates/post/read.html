@@ -1,0 +1,14 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+{% block 'title' %}{{ post.title }}{% endblock %}
+{% block 'main' %}
+<div class="blog-post">
+    <a href="{% url 'post:index' %}">&laquo;Back To List</a>
+    <div class="mb-4 mt-3">
+        <img class="w-100" src="{% static 'images/uploads/' %}{{ post.image }}" alt="">
+    </div>
+    <h2 class="blog-post-title"><a href="{% url 'post:read' post.id %}" class="text-dark">{{ post.title }}</a></h2>
+    <p class="blog-post-meta">{{ post.created_at }}</p>
+    <p>{{ post.contents }}</p>
+ </div><!-- /.blog-post -->
+{% endblock %}
